@@ -13,7 +13,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger"
 const model = () => {
   const models = useGLTF("/Models/dog.drc.glb");
   useThree(({ camera, gl }) => {
-    camera.position.z = 1;
+    camera.position.z = 0.4;
     gl.toneMapping = THREE.ReinhardToneMapping;
     gl.outputColorSpace = THREE.SRGBColorSpace;
   });
@@ -46,7 +46,7 @@ const model = () => {
 
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
-  const dogModel = useRef()
+  const dogModel = useRef(models);
   useGSAP(()=>{
     const tl = gsap.timeline({
       scrollTrigger:{
@@ -58,14 +58,26 @@ const model = () => {
       }
     })
 
-    tl.to()
+    tl.to(dogModel.current.scene.position,{
+      z:"-=0.5",
+      y:"+=0.1"
+    }).to(dogModel.current.scene.rotation,{
+      x: `+=${Math.PI / 15}`
+    }).to(dogModel.current.scene.rotation,{
+      y:`-=${Math.PI}`,
+      x:`+=${Math.PI/15}`
+    },"Thire").to(dogModel.current.scene.position,{
+      x:`-=0.5`,
+      z:`+=0.2`,
+      y:"-=0.0"
+    },"Thire")
   })
   return (
     <>
       <primitive
         object={models.scene}
-        position={[0.2, -0.5, 0]}
-        rotation={[0, Math.PI / 2.5, 0]}
+        position={[0.2, -0.6, 0]}
+        rotation={[-Math.PI/20 , Math.PI / 4, 0]}
       />
       <directionalLight position={[0, 5, 5]} color={0xffffff} intensity={10} />
       {/* <OrbitControls /> */}
