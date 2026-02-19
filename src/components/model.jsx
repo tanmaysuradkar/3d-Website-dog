@@ -24,7 +24,7 @@ const model = () => {
     actions["Take 001"].play();
   }, [actions]);
 
-  const [normalMap, sampleMatCap, branchesMap, BranchesNormalMatCap] =useTexture([ "/dog_normals.jpg", "matcap/mat-1.png", "/branches_diffuse.jpeg", "branches_normals.jpeg",]).map((textures) => {
+  const [normalMap, sampleMatCap, branchesMap, BranchesNormalMatCap] =useTexture([ "/dog_normals.jpg", "matcap/mat-2.png", "/branches_diffuse.jpeg", "branches_normals.jpeg",]).map((textures) => {
       textures.flipY = false;
       textures.colorSpace = THREE.SRGBColorSpace;
       return textures;
@@ -60,7 +60,7 @@ const model = () => {
 
     tl.to(dogModel.current.scene.position,{
       z:"-=0.5",
-      y:"+=0.1"
+      y:"+=0.1",
     }).to(dogModel.current.scene.rotation,{
       x: `+=${Math.PI / 15}`
     }).to(dogModel.current.scene.rotation,{
