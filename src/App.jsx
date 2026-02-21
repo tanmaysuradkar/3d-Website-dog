@@ -6,6 +6,13 @@ const App = () => {
   return (
     <>
       <main>
+        <div className="images">
+          <img src="/msi-chicago.png" alt="" id="tomorrowland" />
+          <img src="/kennedy.png" alt="" id="kennedy" />
+          <img src="/opera.png" alt="" id="opera" />
+          <img src="/kikk.png" alt="" id="kikk" />
+        </div>
+
         <Canvas
         id="Canvas-elemm"
           style={{
@@ -91,7 +98,7 @@ const App = () => {
 
         <section id="section-2">
           <h3>PROJECT LIST</h3>
-          <div className="project_lable-first" id="project_lable">
+          <div id="project_lable-first" className="project_lable">
             <div img-title="tomorrowland" className="project-Info">
               <h1>Tomorrowland</h1>
               <p>
@@ -101,8 +108,8 @@ const App = () => {
               </p>
             </div>
           </div>
-          <div id="project_lable">
-            <div img-title="tomorrowland" className="project-Info">
+          <div className="project_lable">
+            <div img-title="kennedy" className="project-Info">
               <h1>Navy Pier</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -111,8 +118,8 @@ const App = () => {
               </p>
             </div>
           </div>
-          <div id="project_lable">
-            <div img-title="tomorrowland" className="project-Info">
+          <div className="project_lable">
+            <div img-title="opera" className="project-Info">
               <h1>MSI Chicago</h1>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -121,8 +128,8 @@ const App = () => {
               </p>
             </div>
           </div>
-          <div id="project_lable">
-            <div img-title="tomorrowland" className="project-Info">
+          <div  className="project_lable">
+            <div img-title="kikk" className="project-Info">
               <h1>LakshyaX</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
@@ -134,6 +141,7 @@ const App = () => {
         </section>
 
         <section id="section-3">
+          
           <div
             id="hore-text-dog"
             style={{

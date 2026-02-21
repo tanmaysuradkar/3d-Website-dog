@@ -34,10 +34,38 @@ main {
   background-size: cover;
 }
 
+.images{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left: 0;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s linear ;
+  }
+}
 main:has(.project-Info:hover) #Canvas-elemm::after {
   opacity: 0;
 }
-
+main:has(.project-Info[img-title="tomorrowland"]:hover)  #tomorrowland {
+  opacity: 1;
+}
+main:has(.project-Info[img-title="kikk"]:hover)  #kikk {
+  opacity: 1;
+}
+main:has(.project-Info[img-title="opera"]:hover)  #opera {
+  opacity: 1;
+}
+main:has(.project-Info[img-title="kennedy"]:hover)  #kennedy {
+  opacity: 1;
+}
 section {
   height: 100vh;
   width: 100%;
@@ -110,14 +138,17 @@ main {
 }
 
 #section-2 {
+  position: relative;
   padding: 20px;
   margin-top: 20px;
 
   .project-Info p {
+    position: relative;
     font-size: x-small;
   }
 
   .project-Info {
+    position: relative;
     color: rgba(160, 168, 220, 0.7);
     cursor: pointer;
     transition: all 0.3s linear;
@@ -125,13 +156,14 @@ main {
 
   .project-Info:hover {
     color: white;
-  }
-
-  .project_lable-first {
+  } 
+  
+  #project_lable-first {
     margin-top: 50px;
   }
 
-  #project_lable {
+  .project_lable {
+    position: relative;
     margin-bottom: 75px;
     margin-left: 90px;
   }
