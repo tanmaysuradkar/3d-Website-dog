@@ -7,10 +7,13 @@ const App = () => {
     <>
       <main>
         <div className="images">
-          <img src="/msi-chicago.png" alt="" id="tomorrowland" />
-          <img src="/kennedy.png" alt="" id="kennedy" />
-          <img src="/opera.png" alt="" id="opera" />
-          <img src="/kikk.png" alt="" id="kikk" />
+          <img id='tomorrowland' src="/tommorowland.png" alt="" />
+          <img id='navy-pier' src="/navy-pier.png" alt="" />
+          <img id='msi-chicago' src="/msi-chicago.png" alt="" />
+          <img id='phone' src="/phone.png" alt="" />
+          <img id='kikk' src="/kikk.png" alt="" />
+          <img id='kennedy' src="/kennedy.png" alt="" />
+          <img id='opera' src="/opera.png" alt="" />
         </div>
 
         <Canvas
@@ -31,31 +34,17 @@ const App = () => {
         </Canvas>
 
         <div id="navbar-contain">
-          <nav id="nav">
-            <a className="navButton" href="">
-              HOME
-            </a>
-            <a className="navButton" href="#section-2">
-              PROJECT
-            </a>
-            <a className="navButton" href="">
-              ABOUT
-            </a>
-            <a className="navButton" href="">
-              CONTANT
-            </a>
-          </nav>
-          <div id="resume">RESUME</div>
+          <div id="resume">full resume</div>
         </div>
-
+          <div id="hore-img-porfolio">
+            <img src="./tanmay-suradkar.jpg" alt="" />
+          </div>
         <section id="section-1">
           <div
             id="hore-text-larest"
             style={{
               height: "80%",
               width: "50%",
-              textAlign: "right",
-              top: "60%",
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-end",
@@ -97,47 +86,36 @@ const App = () => {
         </section>
 
         <section id="section-2">
-          <h3>PROJECT LIST</h3>
-          <div id="project_lable-first" className="project_lable">
-            <div img-title="tomorrowland" className="project-Info">
-              <h1>Tomorrowland</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, <br />
-                adipisicing elit. Assumenda magni corporis omnis consequuntur,
-                <br /> iste optio quia in facilis facere ipsa.
-              </p>
-            </div>
-          </div>
-          <div className="project_lable">
-            <div img-title="kennedy" className="project-Info">
-              <h1>Navy Pier</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat eaque, sequi iste tenetur <br />
-                dignissimos facere laboriosam et amet illo reprehenderit.
-              </p>
-            </div>
-          </div>
-          <div className="project_lable">
-            <div img-title="opera" className="project-Info">
-              <h1>MSI Chicago</h1>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Necessitatibus at ipsum perferendis <br /> nihil quisquam quos
-                reiciendis asperiores temporibus.
-              </p>
-            </div>
-          </div>
-          <div  className="project_lable">
-            <div img-title="kikk" className="project-Info">
+          <div className="titles">
+            <div img-title="tomorrowland" className="title">
+              <small>2025 - NEXT.JS</small>
               <h1>LakshyaX</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                amet impedit dolore <br />
-                assumenda atque, tempora non, ad quia consequuntur iste.
-              </p>
             </div>
-          </div>
+            <div img-title="navy-pier" className="title">
+              <small>2025 - MERN</small>
+              <h1>Scatch</h1>
+            </div>
+            <div img-title="msi-chicago" className="title">
+              <small>2020 - ONGOING</small>
+              <h1>  MSI Chicago</h1>
+            </div>
+            <div img-title="phone" className="title">
+              <small>2020 - ONGOING</small>
+              <h1>This Was Louise’s Phone</h1>
+            </div>
+            <div img-title="kikk" className="title">
+              <small>2020 - ONGOING</small>
+              <h1>KIKK Festival 2018</h1>
+            </div>
+            <div img-title="kennedy" className="title">
+              <small>2020 - ONGOING</small>
+              <h1>The Kennedy Center</h1>
+            </div>
+            <div img-title="opera" className="title">
+              <small>2020 - ONGOING</small>
+              <h1>Royal Opera Of Wallonia</h1>
+            </div>
+            </div>
         </section>
 
         <section id="section-3">
@@ -195,7 +173,7 @@ const App = () => {
         </section>
 
         <footer>
-          <h3>Develop by Tanmay Rahul Suradkar</h3>
+          <h3>Redevelop of Dogstudio website by Tanmay Rahul Suradkar</h3>
         </footer>
       </main>
     </>

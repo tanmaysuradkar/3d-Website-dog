@@ -167,7 +167,7 @@ const model = () => {
 
    useEffect(() => {
 
-        document.querySelector(`.project-Info[img-title="tomorrowland"]`).addEventListener("mouseenter", () => {
+        document.querySelector(`.title[img-title="tomorrowland"]`).addEventListener("mouseenter", () => {
             material.current.uMatcap1.value = mat19
             gsap.to(material.current.uProgress, {
                 value: 0.0,
@@ -178,20 +178,7 @@ const model = () => {
                 }
             })
         })
-        document.querySelector(`.project-Info[img-title="kikk"]`).addEventListener("mouseenter", () => {
-
-            material.current.uMatcap1.value = mat10
-            
-            gsap.to(material.current.uProgress, {
-                value: 0.0,
-                duration: 0.3,
-                onComplete: () => {
-                    material.current.uMatcap2.value = material.current.uMatcap1.value
-                    material.current.uProgress.value = 1.0
-                }
-            })
-        })
-        document.querySelector(`.project-Info[img-title="kennedy"]`).addEventListener("mouseenter", () => {
+        document.querySelector(`.title[img-title="navy-pier"]`).addEventListener("mouseenter", () => {
 
             material.current.uMatcap1.value = mat8
             
@@ -204,11 +191,59 @@ const model = () => {
                 }
             })
         })
-        document.querySelector(`.project_lable`).addEventListener("mouseenter", () => {
-                let i = 0;
-                console.log("mouseenter is #project_lable :- " ,i++);
+        document.querySelector(`.title[img-title="msi-chicago"]`).addEventListener("mouseenter", () => {
+
+            material.current.uMatcap1.value = mat9
+            
+            gsap.to(material.current.uProgress, {
+                value: 0.0,
+                duration: 0.3,
+                onComplete: () => {
+                    material.current.uMatcap2.value = material.current.uMatcap1.value
+                    material.current.uProgress.value = 1.0
+                }
+            })
         })
-        document.querySelector(`.project-Info[img-title="opera"]`).addEventListener("mouseenter", () => {
+        document.querySelector(`.title[img-title="phone"]`).addEventListener("mouseenter", () => {
+
+            material.current.uMatcap1.value = mat12
+            
+            gsap.to(material.current.uProgress, {
+                value: 0.0,
+                duration: 0.3,
+                onComplete: () => {
+                    material.current.uMatcap2.value = material.current.uMatcap1.value
+                    material.current.uProgress.value = 1.0
+                }
+            })
+        })
+        document.querySelector(`.title[img-title="kikk"]`).addEventListener("mouseenter", () => {
+
+            material.current.uMatcap1.value = mat10
+            
+            gsap.to(material.current.uProgress, {
+                value: 0.0,
+                duration: 0.3,
+                onComplete: () => {
+                    material.current.uMatcap2.value = material.current.uMatcap1.value
+                    material.current.uProgress.value = 1.0
+                }
+            })
+        })
+        document.querySelector(`.title[img-title="kennedy"]`).addEventListener("mouseenter", () => {
+
+            material.current.uMatcap1.value = mat8
+            
+            gsap.to(material.current.uProgress, {
+                value: 0.0,
+                duration: 0.3,
+                onComplete: () => {
+                    material.current.uMatcap2.value = material.current.uMatcap1.value
+                    material.current.uProgress.value = 1.0
+                }
+            })
+        })
+        document.querySelector(`.title[img-title="opera"]`).addEventListener("mouseenter", () => {
 
             material.current.uMatcap1.value = mat13
             
@@ -221,10 +256,10 @@ const model = () => {
                 }
             })
         })
-        document.querySelector(`.project_lable`).addEventListener("mouseleave", () => {
+        document.querySelector(`.titles`).addEventListener("mouseleave", () => {
 
             material.current.uMatcap1.value = mat2
-            console.log("mouseleave is working")
+            
             gsap.to(material.current.uProgress, {
                 value: 0.0,
                 duration: 0.3,
@@ -234,7 +269,8 @@ const model = () => {
                 }
             })
         })
-    }, [])
+
+    }, []);
   return (
     <>
       <primitive
